@@ -13,9 +13,9 @@
     <b:skin><![CDATA[/*
 -----------------------------------------------
 Blogger Template Style
-Name:     Travel
-Designer: Sookhee Lee
-URL:      www.plyfly.net
+Name:     BilloSystems Blogger Theme
+Designer: Dechen Li
+URL:      https://github.com/billosys/blog
 ----------------------------------------------- */
 
 /* Variable definitions
@@ -52,9 +52,9 @@ URL:      www.plyfly.net
 
    <Group description="Tabs Text" selector=".tabs-inner .widget li a">
      <Variable name="tabs.font" description="Font" type="font"
-         default="normal bold 16px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 16px 'Trebuchet MS',Trebuchet,sans-serif"/>
-     <Variable name="tabs.text.color" description="Text Color" type="color" default="#ffffff" value="#ffffff"/>
-     <Variable name="tabs.selected.text.color" description="Selected Color" type="color" default="#ffffff" value="#ffffff"/>
+         default="normal bold 16px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 18px PT Sans Narrow"/>
+     <Variable name="tabs.text.color" description="Text Color" type="color" default="#ffffff" value="#b87209"/>
+     <Variable name="tabs.selected.text.color" description="Selected Color" type="color" default="#ffffff" value="#bbbbbb"/>
    </Group>
 
    <Group description="Tabs Background" selector=".tabs-outer .PageList">
@@ -70,9 +70,9 @@ URL:      www.plyfly.net
 
    <Group description="Post Title" selector="h3.post-title a">
      <Variable name="post.title.font" description="Font" type="font"
-         default="normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 24px PT Sans Narrow"/>
+         default="normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 24px PT Sans Narrow"/>
      <Variable name="post.title.text.color" description="Text Color" type="color"
-         default="#ffffff" value="#ffffff"/>
+         default="#ffffff" value="#bbbbbb"/>
    </Group>
 
    <Group description="Post Background" selector=".column-center-inner">
@@ -490,6 +490,26 @@ body.mobile .AdSense {
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.selected.text.color);
 }
+div.content-inner,
+div.widget#PageList1 ul,
+div.widget#PageList1 ul li.selected a,
+div.widget#PageList1 ul li a:hover,
+div.fauxcolumn-left-outer,
+div.fauxcolumn-inner,
+div#comments {
+    border-radius: 7px;
+}
+
+div.widget#PageList1 ul li.selected a {
+    background-color: #b87209;
+    color: #000;
+}
+
+div#PlusBadge1 iframe {
+    background-color: #000;
+    border-radius: 8px !important;
+}
+
 p.description span {
     position: absolute;
     left: 1px;
@@ -515,6 +535,26 @@ div.popular-posts div.item-title a {
 
 div.popular-posts div.item-snippet {
     font-size:18px;
+}
+
+div.widget#Text1 {
+    position: relative;
+    left: 4px;
+    font: normal bold 32px PT Sans Narrow;
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
+}
+
+div.widget#Text1 span.billo {
+    color: #888 !important;
+}
+
+div.widget#Text1 span.eng {
+    color: #ccc !important;
+}
+
+h3.post-title {
+    font: normal bold 24px PT Sans Narrow;
 }]]></b:skin>
 
     <b:template-skin>
@@ -687,7 +727,26 @@ head.appendChild(script);
     <div class='fauxborder-left header-fauxborder-left'>
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
-      <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+      <b:section class='header' id='header' maxwidgets='1' showaddelement='no'/>
+    </div>
+    </div>
+    <div class='header-cap-bottom cap-bottom'>
+      <div class='cap-left'/>
+      <div class='cap-right'/>
+    </div>
+    </div>
+    </header>
+
+    <div class='tabs-outer'>
+    <div class='tabs-cap-top cap-top'>
+      <div class='cap-left'/>
+      <div class='cap-right'/>
+    </div>
+    <div class='fauxborder-left tabs-fauxborder-left'>
+    <div class='fauxborder-right tabs-fauxborder-right'/>
+    <div class='region-inner tabs-inner'>
+      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'/>
+      <b:section class='tabs' id='crosscol-overflow' showaddelement='no'>
         <b:widget id='Header1' locked='false' title='BilloSystems (Header)' type='Header'>
           <b:includable id='main'>
 
@@ -757,26 +816,51 @@ head.appendChild(script);
   </b:if>
 </b:includable>
         </b:widget>
-      </b:section>
-    </div>
-    </div>
-    <div class='header-cap-bottom cap-bottom'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    </div>
-    </header>
+        <b:widget id='PageList1' locked='false' title='Pages' type='PageList'>
+          <b:includable id='main'>
+  <b:if cond='data:title'><h2><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <b:if cond='data:mobile'>
+      <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
+        <b:loop values='data:links' var='link'>
+          <b:if cond='data:link.isCurrentPage'>
+            <option expr:value='data:link.href' selected='selected'><data:link.title/></option>
+          <b:else/>
+            <option expr:value='data:link.href'><data:link.title/></option>
+          </b:if>
+        </b:loop>
+      </select>
+      <span class='pagelist-arrow'>&amp;#9660;</span>
 
-    <div class='tabs-outer'>
-    <div class='tabs-cap-top cap-top'>
-      <div class='cap-left'/>
-      <div class='cap-right'/>
-    </div>
-    <div class='fauxborder-left tabs-fauxborder-left'>
-    <div class='fauxborder-right tabs-fauxborder-right'/>
-    <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'/>
-      <b:section class='tabs' id='crosscol-overflow' showaddelement='no'/>
+    <b:else/>
+      <ul>
+        <b:loop values='data:links' var='link'>
+          <b:if cond='data:link.isCurrentPage'>
+            <li class='selected'><a expr:href='data:link.href'><data:link.title/></a></li>
+          <b:else/>
+            <li><a expr:href='data:link.href'><data:link.title/></a></li>
+          </b:if>
+        </b:loop>
+      </ul>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+        </b:widget>
+        <b:widget id='Text1' locked='false' title='' type='Text'>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+        </b:widget>
+      </b:section>
     </div>
     </div>
     <div class='tabs-cap-bottom cap-bottom'>
@@ -1873,7 +1957,7 @@ head.appendChild(script);
       <div class='foot' id='footer-3' showaddelement='no'>
         <div class='widget-content' style='text-align: center;'>
           <span>Copyright &#169; 2104</span><br/>
-          <img src="https://raw.githubusercontent.com/billosys/blog/master/images/footer-logo-grey.png" /><br/>
+          <img src='https://raw.githubusercontent.com/billosys/blog/master/images/footer-logo-grey.png'/><br/>
         </div>
       </div>
     </div>
