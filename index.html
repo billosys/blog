@@ -20,34 +20,34 @@ URL:      www.plyfly.net
 
 /* Variable definitions
    ====================
-   <Variable name="keycolor" description="Main Color" type="color" default="#539bcd" value="#539bcd"/>
+   <Variable name="keycolor" description="Main Color" type="color" default="#539bcd" value="#909090"/>
 
    <Group description="Page Text" selector="body">
      <Variable name="body.font" description="Font" type="font"
-         default="normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif"/>
+         default="normal normal 13px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 18px Crimson Text"/>
      <Variable name="body.text.color" description="Text Color" type="color" default="#bbbbbb" value="#bbbbbb"/>
    </Group>
 
    <Group description="Backgrounds" selector=".body-fauxcolumns-outer">
-     <Variable name="body.background.color" description="Outer Background" type="color" default="#539bcd" value="#539bcd"/>
+     <Variable name="body.background.color" description="Outer Background" type="color" default="#539bcd" value="#909090"/>
      <Variable name="content.background.color" description="Main Background" type="color" default="transparent" value="transparent"/>
    </Group>
 
    <Group description="Links" selector=".main-outer">
-     <Variable name="link.color" description="Link Color" type="color" default="#ff9900" value="#ff9900"/>
+     <Variable name="link.color" description="Link Color" type="color" default="#ff9900" value="#b87209"/>
      <Variable name="link.visited.color" description="Visited Color" type="color" default="#b87209" value="#b87209"/>
-     <Variable name="link.hover.color" description="Hover Color" type="color" default="#ff9900" value="#ff9900"/>
+     <Variable name="link.hover.color" description="Hover Color" type="color" default="#ff9900" value="#bbbbbb"/>
    </Group>
 
    <Group description="Blog Title" selector=".header h1">
      <Variable name="header.font" description="Font" type="font"
-         default="normal normal 60px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 60px 'Trebuchet MS',Trebuchet,sans-serif"/>
-     <Variable name="header.text.color" description="Text Color" type="color" default="#ffffff"  value="#ffffff"/>
+         default="normal normal 60px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 60px PT Sans Narrow"/>
+     <Variable name="header.text.color" description="Text Color" type="color" default="#ffffff"  value="#bbbbbb"/>
    </Group>
 
    <Group description="Blog Description" selector=".header .description">
      <Variable name="description.text.color" description="Description Color" type="color"
-         default="$(body.text.color)"  value="$(body.text.color)"/>
+         default="$(body.text.color)"  value="#b87209"/>
    </Group>
 
    <Group description="Tabs Text" selector=".tabs-inner .widget li a">
@@ -64,13 +64,13 @@ URL:      www.plyfly.net
 
    <Group description="Date Header" selector=".main-inner h2.date-header">
      <Variable name="date.font" description="Font" type="font"
-         default="normal normal 14px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 14px 'Trebuchet MS',Trebuchet,sans-serif"/>
-     <Variable name="date.text.color" description="Text Color" type="color" default="$(body.text.color)" value="$(body.text.color)"/>
+         default="normal normal 14px 'Trebuchet MS',Trebuchet,sans-serif" value="italic normal 16px Crimson Text"/>
+     <Variable name="date.text.color" description="Text Color" type="color" default="$(body.text.color)" value="#b87209"/>
    </Group>
 
    <Group description="Post Title" selector="h3.post-title a">
      <Variable name="post.title.font" description="Font" type="font"
-         default="normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif"/>
+         default="normal bold 20px 'Trebuchet MS',Trebuchet,sans-serif" value="normal normal 24px PT Sans Narrow"/>
      <Variable name="post.title.text.color" description="Text Color" type="color"
          default="#ffffff" value="#ffffff"/>
    </Group>
@@ -83,19 +83,19 @@ URL:      www.plyfly.net
 
    <Group description="Gadget Title Color" selector="h2">
      <Variable name="widget.title.font" description="Font" type="font"
-        default="normal bold 14px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 14px 'Trebuchet MS',Trebuchet,sans-serif"/>
-     <Variable name="widget.title.text.color" description="Title Color" type="color" default="#ffffff" value="#ffffff"/>
+        default="normal bold 14px 'Trebuchet MS',Trebuchet,sans-serif" value="normal bold 16px PT Sans Narrow"/>
+     <Variable name="widget.title.text.color" description="Title Color" type="color" default="#ffffff" value="#b87209"/>
    </Group>
 
    <Group description="Gadget Text" selector=".footer-inner .widget, .sidebar .widget">
      <Variable name="widget.font" description="Font" type="font"
         default="$(body.font)" value="$(body.font)"/>
-     <Variable name="widget.text.color" description="Text Color" type="color" default="$(body.text.color)" value="$(body.text.color)"/>
+     <Variable name="widget.text.color" description="Text Color" type="color" default="$(body.text.color)" value="#bbbbbb"/>
    </Group>
 
    <Group description="Gadget Links" selector=".sidebar .widget">
-     <Variable name="widget.link.color" description="Link Color" type="color" default="$(body.text.color)" value="$(body.text.color)"/>
-     <Variable name="widget.link.visited.color" description="Visited Color" type="color" default="$(link.visited.color)" value="$(link.visited.color)"/>
+     <Variable name="widget.link.color" description="Link Color" type="color" default="$(body.text.color)" value="#bbbbbb"/>
+     <Variable name="widget.link.visited.color" description="Visited Color" type="color" default="$(link.visited.color)" value="#b87209"/>
      <Variable name="widget.alternate.text.color" description="Alternate Color" type="color" default="#ffffff" value="#ffffff"/>
    </Group>
 
@@ -105,7 +105,7 @@ URL:      www.plyfly.net
    </Group>
 
    <Variable name="body.background" description="Body Background" type="background"
-       color="$(body.background.color)" default="$(color) none repeat-x scroll top center" value="#539bcd url(//themes.googleusercontent.com/image?id=0BwVBOzw_-hbMYTM3ZTRlZTktYzE4ZC00NWU0LWEyMzctOWFlZjVkZTkzNGY4) repeat fixed top center"/>
+       color="$(body.background.color)" default="$(color) none repeat-x scroll top center" value="$(color) url(http://1.bp.blogspot.com/-yDaYQjSOqg4/VEhsFumc53I/AAAAAAAAACA/h3yJ4_Tsvw4/s0/back-1.2.3.3-dark-b%2526w.jpg) repeat fixed top left"/>
    <Variable name="content.background" description="Content Background" type="background"
        color="$(content.background.color)" default="$(color) none repeat scroll top center" value="transparent url(//blogblog.com/1kt/travel/bg_black_70.png) repeat scroll top left"/>
    <Variable name="comments.background" description="Comments Background" type="background"
@@ -490,12 +490,37 @@ body.mobile .AdSense {
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.selected.text.color);
 }
-]]></b:skin>
+p.description span {
+    position: absolute;
+    left: 1px;
+    color: #b87209;
+    font-style: italic;
+}
+
+div.widget h2 {
+    font-size: 120%;
+}
+
+div.widget-content li {
+    font-size: 10pt;
+}
+
+div.popular-posts div.item-title {
+    font: normal bold 20px PT Sans Narrow;
+}
+
+div.popular-posts div.item-title a {
+    color: #bbb !important;
+}
+
+div.popular-posts div.item-snippet {
+    font-size:18px;
+}]]></b:skin>
 
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='960px'/>
-      <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
-      <b:variable default='310px' name='main.column.right.width' type='length' value='310px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1008px'/>
+      <b:variable default='0' name='main.column.left.width' type='length' value='260px'/>
+      <b:variable default='310px' name='main.column.right.width' type='length' value='0px'/>
 
       <![CDATA[
       body {
@@ -561,7 +586,7 @@ body.mobile .AdSense {
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
   <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
-    <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar'>
+    <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
     function setAttributeOnload(object, attribute, val) {
       if(window.addEventListener) {
@@ -663,7 +688,7 @@ head.appendChild(script);
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
       <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-        <b:widget id='Header1' locked='true' title='BilloSystems (Header)' type='Header'>
+        <b:widget id='Header1' locked='false' title='BilloSystems (Header)' type='Header'>
           <b:includable id='main'>
 
   <b:if cond='data:useImage'>
@@ -826,7 +851,7 @@ head.appendChild(script);
         <div class='column-center-outer'>
         <div class='column-center-inner'>
           <b:section class='main' id='main' showaddelement='no'>
-            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+            <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog'>
               <b:includable id='main' var='top'>
   <b:if cond='data:mobile == &quot;false&quot;'>
 
@@ -1792,7 +1817,7 @@ head.appendChild(script);
         <div class='column-left-inner'>
           <aside>
           <macro:include id='main-column-left-sections' name='sections'>
-            <macro:param default='0' name='num' value='0'/>
+            <macro:param default='0' name='num' value='1'/>
             <macro:param default='sidebar-left' name='idPrefix'/>
             <macro:param default='sidebar' name='class'/>
             <macro:param default='true' name='includeBottom'/>
@@ -1805,7 +1830,7 @@ head.appendChild(script);
         <div class='column-right-inner'>
           <aside>
           <macro:include id='main-column-right-sections' name='sections'>
-            <macro:param default='2' name='num' value='1'/>
+            <macro:param default='2' name='num' value='0'/>
             <macro:param default='sidebar-right' name='idPrefix'/>
             <macro:param default='sidebar' name='class'/>
             <macro:param default='true' name='includeBottom'/>
@@ -1839,7 +1864,7 @@ head.appendChild(script);
     <div class='fauxborder-right footer-fauxborder-right'/>
     <div class='region-inner footer-inner'>
       <macro:include id='footer-sections' name='sections'>
-        <macro:param default='2' name='num'/>
+        <macro:param default='2' name='num' value='1'/>
         <macro:param default='footer' name='idPrefix'/>
         <macro:param default='foot' name='class'/>
         <macro:param default='false' name='includeBottom'/>
@@ -1847,7 +1872,8 @@ head.appendChild(script);
       <!-- outside of the include in order to lock Attribution widget -->
       <div class='foot' id='footer-3' showaddelement='no'>
         <div class='widget-content' style='text-align: center;'>
-          <span>&#169; 2104, BilloSystems Ltd. Co.</span>
+          <span>Copyright &#169; 2104</span><br/>
+          <img src="https://raw.githubusercontent.com/billosys/blog/master/images/footer-logo-grey.png" /><br/>
         </div>
       </div>
     </div>
@@ -1915,7 +1941,7 @@ head.appendChild(script);
   </macro:if>
 </macro:includable>
 
-<b:section-contents id='sidebar-right-1'>
+<b:section-contents id='sidebar-left-1'>
   <b:widget id='Profile1' locked='false' title='Contributors' type='Profile'>
     <b:includable id='main'>
     <b:if cond='data:title != &quot;&quot;'>
@@ -1958,6 +1984,61 @@ head.appendChild(script);
      <b:include name='quickedit'/>
     </div>
   </b:includable>
+  </b:widget>
+  <b:widget id='PlusBadge1' locked='false' title='Google+' type='PlusBadge'>
+    <b:includable id='main'>
+
+  <script type='text/javascript'>
+  window.___gcfg = {
+    lang: &#39;<data:language/>&#39;
+  };
+  </script>
+
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div data-rel='author' expr:class='&quot;g-&quot; + data:badgeType' expr:data-href='data:profileUrl' expr:data-layout='data:layout' expr:data-showcoverphoto='data:showCoverPhoto' expr:data-showtagline='data:showTagline' expr:data-theme='data:theme' expr:data-width='data:width'>
+  </div>
+</b:includable>
+  </b:widget>
+  <b:widget id='Label1' locked='false' title='Categories' type='Label'>
+    <b:includable id='main'>
+  <b:if cond='data:title'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+      <b:loop values='data:labels' var='label'>
+        <li>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </li>
+      </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
   </b:widget>
   <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
     <b:includable id='main'>
@@ -2042,43 +2123,58 @@ head.appendChild(script);
  </b:if>
 </b:includable>
   </b:widget>
-  <b:widget id='Label1' locked='false' title='Categories' type='Label'>
+</b:section-contents><b:section-contents id='footer-1'>
+  <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts'>
     <b:includable id='main'>
-  <b:if cond='data:title'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-      <b:loop values='data:labels' var='label'>
-        <li>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+  <b:if cond='data:title'><h2><data:title/></h2></b:if>
+  <div class='widget-content popular-posts'>
+    <ul>
+      <b:loop values='data:posts' var='post'>
+      <li>
+        <b:if cond='data:showThumbnails == &quot;false&quot;'>
+          <b:if cond='data:showSnippets == &quot;false&quot;'>
+            <!-- (1) No snippet/thumbnail -->
+            <a expr:href='data:post.href'><data:post.title/></a>
           <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            <!-- (2) Show only snippets -->
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <div class='item-snippet'><data:post.snippet/></div>
           </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </li>
-      </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+        <b:else/>
+          <b:if cond='data:showSnippets == &quot;false&quot;'>
+            <!-- (3) Show only thumbnails -->
+            <div class='item-thumbnail-only'>
+              <b:if cond='data:post.thumbnail'>
+                <div class='item-thumbnail'>
+                  <a expr:href='data:post.href' target='_blank'>
+                    <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
+                  </a>
+                </div>
+              </b:if>
+              <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            </div>
+            <div style='clear: both;'/>
           <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            <!-- (4) Show snippets and thumbnails -->
+            <div class='item-content'>
+              <b:if cond='data:post.thumbnail'>
+                <div class='item-thumbnail'>
+                  <a expr:href='data:post.href' target='_blank'>
+                    <img alt='' border='0' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
+                  </a>
+                </div>
+              </b:if>
+              <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+              <div class='item-snippet'><data:post.snippet/></div>
+            </div>
+            <div style='clear: both;'/>
           </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
+        </b:if>
+      </li>
       </b:loop>
-    </b:if>
+    </ul>
     <b:include name='quickedit'/>
   </div>
 </b:includable>
   </b:widget>
-</b:section-contents><b:section-contents id='footer-1'/><b:section-contents id='footer-2-1'/><b:section-contents id='footer-2-2'/></html>
+</b:section-contents></html>
