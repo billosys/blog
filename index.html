@@ -570,7 +570,7 @@ h3.post-title {
     font: normal bold 24px PT Sans Narrow;
 }
 
-div#PopularPosts1 {
+div#PopularPosts1, div#Feed1 {
     background-color: rgba(127,127,127,0.5);     border-radius: 7px;
     padding: 2em;
     margin-bottom: 3em;
@@ -670,7 +670,7 @@ div#footer-3.foot div.widget-content span {
         gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
           if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
             gapi.iframes.getContext().openChild({
-                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0755477537323647223649\46blogName\75BilloSystems\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75DISABLED\46layoutType\75LAYOUTS\46searchRoot\75http://blog.billo.systems/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://blog.billo.systems/\46blogFollowUrl\75https://plus.google.com/103080184945138173154\46vt\75-2873723404205675630&#39;,
+                url: &#39;https://www.blogger.com/navbar.g?targetBlogID\0755477537323647223649\46blogName\75BilloSystems\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75DISABLED\46layoutType\75LAYOUTS\46searchRoot\75http://blog.billo.systems/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://blog.billo.systems/\46blogFollowUrl\75https://plus.google.com/112380153888630825794\46vt\75-2873723404205675630&#39;,
                 where: document.getElementById(&quot;navbar-iframe-container&quot;),
                 id: &quot;navbar-iframe&quot;
             });
@@ -2112,6 +2112,71 @@ head.appendChild(script);
   </div>
 </b:includable>
   </b:widget>
+  <b:widget id='Subscribe1' locked='false' title='Subscribe' type='Subscribe'>
+    <b:includable id='main'>
+  <b:if cond='data:isPublic'>
+  <div style='white-space:nowrap'>
+
+    <b:if cond='data:title != &quot;&quot;'>
+      <h2 class='title'><data:title/></h2>
+    </b:if>
+  <div class='widget-content'>
+    <b:loop values='data:feeds' var='feed'>
+        <div expr:class='&quot;subscribe-wrapper subscribe-type-&quot; + data:feed.type'>
+
+
+        <div expr:class='&quot;subscribe expanded subscribe-type-&quot; + data:feed.type' expr:id='&quot;SW_READER_LIST_&quot; + data:widgetId + data:feed.type' style='display:none;'>
+
+          <div class='top'>
+            <span class='inner' expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
+              <img class='subscribe-dropdown-arrow' expr:src='data:arrowDropdownImg'/>
+              <img align='absmiddle' alt='' border='0' class='feed-icon' expr:src='data:feedIconImg'/>
+              <data:feed.title/>
+            </span>
+
+            <div class='feed-reader-links'>
+              <a class='feed-reader-link' expr:href='&quot;http://www.netvibes.com/subscribe.php?url=&quot; + data:feed.encodedUrl' target='_blank'>
+                <img expr:src='data:imagePathBase + &quot;subscribe-netvibes.png&quot;'/>
+              </a>
+              <a class='feed-reader-link' expr:href='&quot;http://add.my.yahoo.com/content?url=&quot; + data:feed.encodedUrl' target='_blank'>
+                <img expr:src='data:imagePathBase + &quot;subscribe-yahoo.png&quot;'/>
+              </a>
+              <a class='feed-reader-link' expr:href='data:feed.url' target='_blank'>
+                <img align='absmiddle' class='feed-icon' expr:src='data:feedIconImg'/>
+                Atom
+              </a>
+            </div>
+
+          </div>
+          <div class='bottom'/>
+        </div>
+
+        <div class='subscribe' expr:id='&quot;SW_READER_LIST_CLOSED_&quot; + data:widgetId +data:feed.type' expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
+          <div class='top'>
+             <span class='inner'>
+               <img class='subscribe-dropdown-arrow' expr:src='data:arrowDropdownImg'/>
+               <span expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
+                 <img align='absmiddle' alt='' border='0' class='feed-icon' expr:src='data:feedIconImg'/>
+                 <data:feed.title/>
+               </span>
+             </span>
+           </div>
+          <div class='bottom'/>
+        </div>
+
+      </div>
+    </b:loop>
+
+    <div style='clear:both'/>
+
+  </div>
+  </div>
+
+  <b:include name='quickedit'/>
+
+ </b:if>
+</b:includable>
+  </b:widget>
   <b:widget id='Label1' locked='false' title='Categories' type='Label'>
     <b:includable id='main'>
   <b:if cond='data:title'>
@@ -2287,5 +2352,16 @@ head.appendChild(script);
     <b:include name='quickedit'/>
   </div>
 </b:includable>
+  </b:widget>
+  <b:widget id='Feed1' locked='false' title='Recent Blog Comments' type='Feed'>
+    <b:includable id='main'>
+    <h2><data:title/></h2>
+    <div class='widget-content' expr:id='data:widget.instanceId + &quot;_feedItemListDisplay&quot;'>
+      <span style='filter: alpha(25); opacity: 0.25;'>
+        <a expr:href='data:feedUrl'><data:loadingMsg/></a>
+      </span>
+    </div>
+    <b:include name='quickedit'/>
+  </b:includable>
   </b:widget>
 </b:section-contents></html>
